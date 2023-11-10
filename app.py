@@ -14,7 +14,6 @@ api_token = "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"
 # Load the tokenizer and model with authentication and trust remote code
 model_name = "stabilityai/stablelm-3b-4e1t"
 tokenizer = AutoTokenizer.from_pretrained(model_name, revision="main", token=api_token, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained(model_name, revision="main", token=api_token, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(
   "stabilityai/stablelm-3b-4e1t",
   trust_remote_code=True,
