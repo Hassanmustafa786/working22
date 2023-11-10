@@ -15,7 +15,11 @@ api_token = "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"
 model_name = "stabilityai/stablelm-3b-4e1t"
 tokenizer = AutoTokenizer.from_pretrained(model_name, revision="main", token=api_token, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_name, revision="main", token=api_token, trust_remote_code=True)
-
+model = AutoModelForCausalLM.from_pretrained(
+  "stabilityai/stablelm-3b-4e1t",
+  trust_remote_code=True,
+  torch_dtype="auto",
+)
 input_prompt = st.text_input("Enter a text prompt:")
 generate_button = st.button("Generate Text")
 
