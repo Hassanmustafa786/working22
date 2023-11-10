@@ -1,5 +1,4 @@
 import streamlit as st
-!pip install transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 # tokenizer = AutoTokenizer.from_pretrained("stabilityai/stablelm-3b-4e1t")
